@@ -1,4 +1,30 @@
-number1 = int(input("Enter first number: "))
-number2 = int(input("Enter second number: "))
+subjects = ["sinhala","English","ICT","Maths"]
+marks = []
+grades = []
+total = 0
+average = 0
 
-print("Sum of the numbers: ", number1 + number2)
+def gradeCal(mark):
+    if mark >= 75:
+        return "A"
+    elif mark >= 65:
+        return "B"
+    elif mark >= 55:
+        return "C"
+    elif mark >= 35:
+        return "S"
+    else:
+        return"W"
+
+for subject in subjects:
+    mark = int(input("Enter marks for "+ subject + ": "))
+    marks.append(mark)
+    total = total + mark
+    grades.append(gradeCal(mark))
+
+for i in range(len(subjects)):
+    print(subjects[i]," - " , marks[i], " - ", grades[i])
+
+print("total = ",total)
+print("Average = ", total/len(subjects))
+
