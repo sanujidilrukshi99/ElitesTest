@@ -1,7 +1,8 @@
 marks = int(input("Enter your Marks: "))
-if marks<0 or marks>100:
+while marks<0 or marks>100:
      print("Invalid Marks")  
-elif marks>=75:
+     marks = int(input("Enter your Marks: "))
+if marks>=75:
         print("A")
 elif marks>=65:
         print("B")
