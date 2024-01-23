@@ -1,3 +1,4 @@
+#Multiples Of 9
 x = 0
 while x <= 99:
     if x % 9 == 0:
